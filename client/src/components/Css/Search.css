@@ -1,0 +1,51 @@
+.pokemon-search-btn {
+    background-color: #fff; /* Color de fondo blanco */
+    border: 2px solid #e91e63; /* Borde rosa de Pokemon */
+    color: #e91e63; /* Color de texto rosa de Pokemon */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    padding: 10px 20px; /* Padding interno del botón */
+    border-radius: 50px; /* Borde redondeado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    text-shadow: 1px 1px 1px #fff; /* Sombra de texto */
+    transition: all 0.3s ease; /* Transición suave */
+    font-size:13px
+  }
+  
+  .pokemon-search-btn:hover {
+    background-color: #e91e63; /* Color de fondo rosa de Pokemon en hover */
+    color: #fff; /* Color de texto blanco en hover */
+    transform: scale(1.1); /* Escala del botón en hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elevada */
+  }
+  .pokemon-label {
+    display: block; /* Convertir en bloque para que ocupe todo el ancho */
+    font-family: 'Pokemon Solid', sans-serif; /* Fuente personalizada de Pokemon */
+    font-size: 18px; /* Tamaño de fuente */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    color: #2e2b2c; /* Color de texto rosa de Pokemon */
+    text-shadow: 1px 1px 1px #e2d2d2; /* Sombra de texto */
+    margin-bottom: 1px; /* Margen inferior para separarlo del input */
+  }
+  
+  .pokemon-input {
+    border: 2px solid #e91e63; /* Borde rosa de Pokemon */
+    border-radius: 50px; /* Borde redondeado */
+    color: #333; /* Color de texto */
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 10px 20px; /* Padding interno del input */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  
+  .pokemon-input:focus {
+    outline: none; /* Quitar el borde de foco predeterminado */
+    border-color: #ffcb05; /* Cambiar el borde en foco a amarillo de la pokebola */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elevada */
+  }
+  
+  /* Añadir estilos personalizados al placeholder */
+  .pokemon-input::placeholder {
+    color: #999; /* Color de texto del placeholder */
+    font-style: italic; /* Estilo de fuente en cursiva */
+    text-shadow: none; /* Quitar sombra de texto del placeholder */
+  }

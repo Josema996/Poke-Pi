@@ -1,0 +1,23 @@
+.paginado{
+  display: flex;
+  justify-content: center;
+  }
+
+.pagination.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: initial;
+    margin: 2rem;
+}
+.number{
+  padding: 13px;
+  margin: 15px;
+  margin-right: 15px;
+  border-radius: 50%;
+  border-style: none;
+  background-color: rgb(168, 207, 27);
+  color: rgb(250, 250, 250);
+  font-weight: bold;
+  cursor: pointer;
+}

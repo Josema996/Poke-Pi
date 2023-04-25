@@ -1,0 +1,63 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    
+}
+.btn-Crear {
+    background-color: #ffcb05; /* Color de fondo amarillo para imitar la pokebola */
+    border: 2px solid #000; /* Borde negro */
+    color: #000; /* Color de texto negro */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    padding: 10px 20px; /* Padding interno del botón */
+    border-radius: 50px; /* Borde redondeado para imitar la pokebola */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    text-shadow: 1px 1px 1px #fff; /* Sombra de texto */
+    transition: all 0.3s ease; /* Transición suave */
+    margin-right: 20px;
+  }
+  
+  .btn-Crear:hover {
+    transform: scale(1.1); /* Escala del botón en hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elevada */
+  }
+
+  .pokemon-title {
+    font-family: 'Pokemon Solid', sans-serif; /* Fuente personalizada de Pokemon */
+    font-size: 25px; /* Tamaño de fuente */
+    text-align: center; /* Alineación de texto centrada */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    color: #c2d420; /* Color de texto rosa de Pokemon */
+    text-shadow: 2px 2px #000; /* Sombra de texto */
+    letter-spacing: 2px; /* Espacio entre letras */
+  }
+  .navbar {
+    background-color: blue;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+  }
+  
+  select {
+    width: 100%;
+    background-color: #fffefe;
+    border: none;
+    color: #000000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    padding: 5px;
+    text-transform: uppercase;
+  }
+  
+  option {
+    background-color: #f5f5f5;
+    border: none;
+    color: #000000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
