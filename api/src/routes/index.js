@@ -36,7 +36,6 @@ const getApiInfo = async () => {
                 types: pokemon.data.types.map(e => {
                     return ({
                         name: e.type.name,
-                        img: `https://typedex.app/images/ui/types/dark/${e.type.name}.svg`,
                     })
                 }),
                 hp: pokemon.data.stats[0].base_stat,
@@ -77,11 +76,10 @@ const getAllPokemons = async () => {
 
 //PROCEDEMOS A GENERAR LAS RUTAS
 
-
 //PRIMERA RUTA TRAE TODOS LSOS POKEMONES
 router.get('/pokemons', async (req, res) => {
     try {
-
+        
         return res.status(200).send(await getAllPokemons());
 
     } catch (error) {

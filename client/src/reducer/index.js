@@ -1,8 +1,9 @@
-
 const initialState ={
     pokemons : [],
+    allpokemons : [],
     types : [],
     detail : []
+
 }
 
 function rootReducer (state= initialState, action){
@@ -10,7 +11,8 @@ function rootReducer (state= initialState, action){
         case 'GET_POKEMONS':
             return{
                 ...state,
-                pokemons:action.payload
+                pokemons:action.payload,
+                allpokemons:action.payload
             }
         case 'GET_NAME_POKEMONS':
             return{
@@ -30,16 +32,21 @@ function rootReducer (state= initialState, action){
             }
             
         case 'FILTER_CREATED' :
-            const statusFiltered2 = action.payload === 'Created' ? state.pokemons.filter(el => el.createdInDb) : state.pokemons.filter(el => !el.createdInDb)
+            const statusFiltered2 = action.payload === 'Created' ? state.pokemons.filter(el => el.createdInDb) : state.allpokemons.filter(el => !el.createdInDb)
             return{
                 ...state,
-                pokemons: action.payload === 'All' ? state.pokemons : statusFiltered2
+                pokemons: action.payload === 'All' ? state.allpokemons : statusFiltered2
             }
         
         case "GET_DETAILS":
             return{
                 ...state,
                 detail: action.payload
+            }
+        case "LIMPIAR_DETAILS":
+            return{
+                ...state,
+                detail: []
             }
 
         case 'ORDER_BY_NAME':

@@ -18,6 +18,11 @@ function validate(input){
     }else if (!input.speed){
         errors.speed = 'Se requiere saber la velocidad del pokemon';
     }
+    else if (!input.img){
+        errors.img = 'Se requiere que la imagen sea PNG';
+    } else if (!input.height){
+        errors.height = 'Se requiere que se ingrese un dato';
+    }
     return errors;
 }
 
@@ -75,6 +80,7 @@ export default function PokemonCreate(){
     function handleSubmit(e){
         e.preventDefault();
         console.log(input)
+        if(input.name === '' || input.hp === '' || input.attack === '' ||  input.defense === '' || input.speed.length === 0) return alert('Pibe completame los campos porfa');
         dispatch(postPokemon(input))
         alert("POKEMON CREADO!!")
         setInput({
@@ -166,6 +172,9 @@ export default function PokemonCreate(){
                     name="height"
                     onChange={handleChange}
                     />
+                     {errors.height && (
+                        <p className='error'>{errors.height}</p>
+                    )}
                 </div>
                 <div>
                     <label>Peso:</label>
@@ -177,13 +186,16 @@ export default function PokemonCreate(){
                     />
                 </div>
                 <div>
-                    <label>Imagen:</label>
+                    <label>Imagen PNG:</label>
                     <input 
                     type="text"
                     value={input.img}
                     name="img"
                     onChange={handleChange}
                     />
+                     {errors.img && (
+                        <p className='error'>{errors.img}</p>
+                    )}
                 </div>
                 
             <label>Tipo :</label>

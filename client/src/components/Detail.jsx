@@ -12,6 +12,7 @@ const {id} = useParams()
 
 useEffect(() => {
     dispatch(getDetail(id));
+    return(() => dispatch({type:"LIMPIAR_DETAILS"}))
 },[dispatch, id])
 
 const myPokemon = useSelector ((state) => state.detail)
@@ -36,7 +37,7 @@ return(
         }
         <Link to='/home'>
             <button>Volver</button>
-        </Link>
+        </Link> 
     </div>
 )
 
